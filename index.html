@@ -11,8 +11,12 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Blue New.json", {onProgress: UnityProgress});
     </script>
+     <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/al=UadGd2tb60SsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin-"anonymous"></script>
   </head>
-  <body>
+  <body style="display: none;"></body>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 720px; height: 1280px"></div>
       <div class="footer">
@@ -20,5 +24,11 @@
         <div class="title">Blue Bounce</div>
       </div>
     </div>
+  <script>
+      setTimeout(function(){
+        $("#unityContainer").find("button").click();
+         $("body").fadeIn();
+      },1000)
+    </script>
   </body>
 </html>
